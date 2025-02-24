@@ -11,7 +11,7 @@ library("htmltools")
 box::use(modules/module_shinyUI)
 box::use(modules/module_example)
 
-# user database for logins
+# user database for login module
 #CURRENTLY HARD CODED (NOT RECOMMENDED) YOU SHOULD CREATE THIS DF 
 #AND STORE IT AS A HASHED FILE WITH SODIUM
 user_base <- tibble::tibble(

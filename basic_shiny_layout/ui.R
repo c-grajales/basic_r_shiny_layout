@@ -23,15 +23,15 @@ main_log <- layout_column_wrap(
   )
 
 #Defining an example bslib Card
-main_results_card <- navs_pill_card(
+main_results_card <- navset_card_pill(
   title = "Awesome Card",
   full_screen = TRUE,
-  nav(
+  nav_panel(
     "First Card Tab",
     br(),
     class="bg-light",
   ),
-  nav(
+  nav_panel(
     "Second Card Tab",
     br(),
     class="bg-light",
@@ -61,7 +61,7 @@ ui <- page_navbar(
     #Dashboard Title
     "Example TITLE"
   ),
-  nav("Login",main_log,icon=icon("shield"),
+  nav_panel("Login",main_log,icon=icon("shield"),
   #THIS SPECIFIC TAG WILL CHANGE THE BACKGROUND-IMAGE WITH A GRADIENT (FIRST COMMENTED LINE) OR PIC
   tags$style(
         "body{
@@ -76,14 +76,14 @@ ui <- page_navbar(
   "))
   )
       ),
-  nav("Home",icon=icon("desktop"),
-      navs_pill(
+  nav_panel("Home",icon=icon("desktop"),
+      navset_pill(
         #FIRST TAB --
-        nav(title="Tab 1",
+        nav_panel(title="Tab 1",
             br(),
             main_cards),
       #SECOND TAB --
-      nav(title="Tab 2",
+      nav_panel(title="Tab 2",
           br()
           )
       )
